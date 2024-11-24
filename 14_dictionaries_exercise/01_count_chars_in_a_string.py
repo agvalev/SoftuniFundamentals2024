@@ -1,0 +1,20 @@
+def count_letters(cur_text):
+    chars_dict = {}
+    for word in cur_text:
+        for letter in word:
+            if letter not in chars_dict:
+                chars_dict[letter] = 1
+            else:
+                chars_dict[letter] += 1
+    return chars_dict
+
+
+
+
+text = input().split()
+
+
+charsacters_dictionary = count_letters(text)
+for k, v in charsacters_dictionary.items():
+    print(f"{k} -> {v}")
+print(charsacters_dictionary)
